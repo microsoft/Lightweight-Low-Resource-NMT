@@ -5,7 +5,9 @@
 Leveraging shared learning through Massively Multilingual Models, state-of-the-art machine translation models are often able to adapt to the paucity of data for low-resource languages. However, this performance comes at the cost of significantly bloated models which are not practically deployable. In this work, we evaluate knowledge distillation's use to compress MT models focusing on languages with extremely limited training data. Through our analysis across 8 languages, we find that the variance in the performance of the distilled models due to their dependence on priors including the amount of synthetic data used for distillation, the student architecture, training hyperparameters and confidence of the teacher models, makes distillation a brittle compression mechanism. To mitigate this, we explore the use of post-training quantization for the compression of these models. Here, we find that while distillation provides gains across some low-resource languages, quantization provides more consistent performance trends for the entire range of languages, especially the lowest-resource languages in our target set.
 
 ## Languages Covered and Data Sources 
+
 We cover 8 languages of diverse linguistic origins, varying data between 7K samples to 3M samples for our study. The train-test splits for Gondi and Mundari will be released soon and testsets for all other languages are publicly available (listed in the paper). 
+
 | **Language** | **Train Data (Sentence Pairs)** | **Links**                                                |
 |--------------|---------------------------------|-----------                                               |
 | Bribri       | ~7000                           | [Here](https://github.com/AmericasNLP/americasnlp2021)   |
@@ -16,12 +18,12 @@ We cover 8 languages of diverse linguistic origins, varying data between 7K samp
 | Odia         | ~1M                             | [Here](https://ai4bharat.iitm.ac.in/samanantar)          |
 | Punjabi      | ~2.4M                           | [Here](https://ai4bharat.iitm.ac.in/samanantar)          |
 | Gujarati     | ~3M                             | [Here](https://ai4bharat.iitm.ac.in/samanantar)          |
--------------------------------------------------------------------------------------------------------------
 
 ## Model Benchmarks - Compressed Variants 
 Each of the quantized variants is at least 3x smaller than it's best performing model and the distilled variants are at least 6x smaller.  Models and their compressed variants (for plug-and-play usage) coming soon! 
-| **Language** | **Best Uncompressed Variant** | **Best Distilled Variant**             | **Best Quantized Variant**             |
-|--------------|:-----------------------------:|:--------------------------:|:---------:|:--------------------------:|:---------:|
+
+| **Language** | **Best Uncompressed Variant** | **Best Distilled Variant** |           | **Best Quantized Variant** |           |
+|--------------|-------------------------------|----------------------------| --------- |----------------------------|-----------|
 |              |           **spBLEU**          |         **spBLEU**         | **chrF2** |         **spBLEU**         | **chrF2** |
 | _Bribri_     |              6.4              |             6.8            |    13.2   |             7.4            |    19.4   |
 | _Wixarica_   |              6.2              |             4.1            |    17.3   |             7.2            |    26.8   |
@@ -31,6 +33,7 @@ Each of the quantized variants is at least 3x smaller than it's best performing 
 | _Odia_       |              27.4             |            20.2            |    40.7   |            21.0            |    41.3   |
 | _Punjabi_    |              38.4             |            32.8            |    46.6   |            27.0            |    48.0   |
 | _Gujarati_   |              35.9             |            29.8            |    48.6   |            28.4            |    51.4   |
+----------------------------------------------------------------------------------------------------------------------------------
 
 ## Environment Information 
 The environment can be setup using the provided requirements file (Requires pip > pip 22.0.2)
