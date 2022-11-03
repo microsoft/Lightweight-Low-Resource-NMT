@@ -35,13 +35,13 @@ Each of the quantized variants is at least 3x smaller than it's best performing 
 | _Gujarati_   |              35.9             |            29.8            |    48.6   |            28.4            |    51.4   |
 ----------------------------------------------------------------------------------------------------------------------------------
 
-## Environment Information 
+#### Environment Information 
 The environment can be setup using the provided requirements file (Requires pip > pip 22.0.2)
 ```
 pip install -r requirements.txt 
 ```
 
-# Directory Structure
+#### Directory Structure
 ```
 ├── readme.md
 ├── requirements.txt
@@ -62,7 +62,7 @@ pip install -r requirements.txt
     └── utils.py                       # utils like script conversion, checking for deduplication
 ```
 
-## Training Procedure 
+#### Training Procedure 
 ```
 1. Run **preprocess.py** to convert training data to HF format and generating the Tokenizer Files for the Vanilla tranformer. 
 2. Run **train.py** for training and saving the best model. (monitored metric is BLEU with mt13eval tokenizer)
@@ -73,7 +73,7 @@ Sample commands with default hyperparameter values are specified in scripts/
 ```
 
 
-## Evaluation Signature: BLEU and chrF
+#### Evaluation Signature: BLEU and chrF
 ```
 {
  "nrefs:1|case:mixed|eff:no|tok:spm-flores|smooth:exp|version:2.2.0",
@@ -98,7 +98,7 @@ Sample commands with default hyperparameter values are specified in scripts/
 }
 ```
 
-## Datasets Used 
+#### Datasets Used 
  - [Wixarika]
     Mager, M., Carrillo, D., & Meza, I. (2018). Probabilistic finite-state morphological sgmenter for wixarika (huichol) language. Journal of Intelligent & Fuzzy Systems, 34(5), 3081-3087.
  - [Bribri]
@@ -112,7 +112,6 @@ Sample commands with default hyperparameter values are specified in scripts/
     pages = {145-162},
     year = {2022},
     month = {02},
-    abstract = "{We present Samanantar, the largest publicly available parallel corpora collection for Indic languages. The collection contains a total of 49.7 million sentence pairs between English and 11 Indic languages (from two language families). Specifically, we compile 12.4 million sentence pairs from existing, publicly available parallel corpora, and additionally mine 37.4 million sentence pairs from the Web, resulting in a 4× increase. We mine the parallel sentences from the Web by combining many corpora, tools, and methods: (a) Web-crawled monolingual corpora, (b) document OCR for extracting sentences from scanned documents, (c) multilingual representation models for aligning sentences, and (d) approximate nearest neighbor search for searching in a large collection of sentences. Human evaluation of samples from the newly mined corpora validate the high quality of the parallel sentences across 11 languages. Further, we extract 83.4 million sentence pairs between all 55 Indic language pairs from the English-centric parallel corpus using English as the pivot language. We trained multilingual NMT models spanning all these languages on Samanantar which outperform existing models and baselines on publicly available benchmarks, such as FLORES, establishing the utility of Samanantar. Our data and models are available publicly at Samanantar and we hope they will help advance research in NMT and multilingual NLP for Indic languages.}",
     issn = {2307-387X},
     doi = {10.1162/tacl_a_00452},
     url = {https://doi.org/10.1162/tacl\_a\_00452},
@@ -120,7 +119,7 @@ Sample commands with default hyperparameter values are specified in scripts/
 }
 
 
-## Contributing
+#### Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
@@ -134,7 +133,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-## Trademarks
+#### Trademarks
 
 This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
 trademarks or logos is subject to and must follow 
