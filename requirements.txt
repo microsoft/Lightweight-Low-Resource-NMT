@@ -50,7 +50,7 @@ pathtools==0.1.2
 Pillow==8.3.2
 portalocker==2.3.2
 promise==2.3
-protobuf==3.18.1
+protobuf==3.18.3
 psutil==5.8.0
 pyarrow==5.0.0
 pyasn1==0.4.8
