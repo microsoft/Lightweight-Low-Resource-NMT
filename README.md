@@ -1,10 +1,10 @@
-# Low-Resource MT Compression
+## Low-Resource MT Compression
 
-## Official Code for "Too Brittle To Touch: Comparing the Stability of Quantization and Distillation Towards Developing Lightweight Low-Resource MT Models" (To Appear in WMT 2022)
+#### Official Code for "Too Brittle To Touch: Comparing the Stability of Quantization and Distillation Towards Developing Lightweight Low-Resource MT Models" (To Appear in WMT 2022)
 
-Leveraging shared learning through Massively Multilingual Models, state-of-the-art machine translation models are often able to adapt to the paucity of data for low-resource languages. However, this performance comes at the cost of significantly bloated models which are not practically deployable. In this work, we evaluate knowledge distillation's use to compress MT models focusing on languages with extremely limited training data. Through our analysis across 8 languages, we find that the variance in the performance of the distilled models due to their dependence on priors including the amount of synthetic data used for distillation, the student architecture, training hyperparameters and confidence of the teacher models, makes distillation a brittle compression mechanism. To mitigate this, we explore the use of post-training quantization for the compression of these models. Here, we find that while distillation provides gains across some low-resource languages, quantization provides more consistent performance trends for the entire range of languages, especially the lowest-resource languages in our target set.
+Leveraging shared learning through Massively Multilingual Models, state-of-the-art machine translation models are often able to adapt to the paucity of data for low-resource languages. However, this performance comes at the cost of significantly bloated models which are not practically deployable. In this work, we evaluate knowledge distillation's use to compress MT models focusing on languages with extremely limited training data. Through our analysis across 8 languages, we find that the variance in the performance of the distilled models due to their dependence on multiple priors makes distillation a brittle compression mechanism. We further explore the use of post-training quantization for the compression of these models. Here, we find that quantization provides more consistent performance trends (than distillation) for the entire range of languages, especially the lowest-resource languages in our target set.
 
-## Languages Covered and Data Sources 
+#### Languages Covered and Data Sources 
 
 We cover 8 languages of diverse linguistic origins, varying data between 7K samples to 3M samples for our study. The train-test splits for Gondi and Mundari will be released soon and testsets for all other languages are publicly available (listed in the paper). 
 
@@ -19,7 +19,7 @@ We cover 8 languages of diverse linguistic origins, varying data between 7K samp
 | Punjabi      | ~2.4M                           | [Here](https://ai4bharat.iitm.ac.in/samanantar)          |
 | Gujarati     | ~3M                             | [Here](https://ai4bharat.iitm.ac.in/samanantar)          |
 
-## Model Benchmarks - Compressed Variants 
+#### Model Benchmarks - Compressed Variants 
 Each of the quantized variants is at least 3x smaller than it's best performing model and the distilled variants are at least 6x smaller.  Models and their compressed variants (for plug-and-play usage) coming soon! 
 
 | **Language** | **Best Uncompressed Variant** | **Best Distilled Variant** |           | **Best Quantized Variant** |           |
