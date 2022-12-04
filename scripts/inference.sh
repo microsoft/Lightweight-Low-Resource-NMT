@@ -21,7 +21,7 @@ python inference.py \
 --benchmark_path tfb_hi_mun.txt \
 --model_path Hm/tfb_hi_mun \
 --vocab_path vocab_mun.json
---src_file test_hi.txt \
+--src_file test_hi.txt 
 
 # Generate inference for the quantized (Batch processing is WIP)
 python inference.py \
@@ -33,7 +33,7 @@ python inference.py \
 --src_file eng_Latn.devtest \
 --task_prefix "Translate English to Assamesse:" \
 --encoder_interpreter_path mt5_small_en_as_encoder.tflite \
---decoder_interpreter_path mt5_small_en_as_decoder.tflite \
+--decoder_interpreter_path mt5_small_en_as_decoder.tflite 
 
 # Generating inferences for the teacher model on an unlabelled dataset for distillation
 python student_labels.py \
